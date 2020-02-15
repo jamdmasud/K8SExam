@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  k8sexam:
+    image: ${DOCKER_REGISTRY}/k8sexam:${VERSION:-dev}
+    build:
+      context: .
+      dockerfile: K8SExam/Dockerfile

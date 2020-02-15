@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "K8SExam", "K8SExam\K8SExam.csproj", "{CF122618-2296-4246-AEE1-6AB4927E2DD1}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{F451941E-81A3-4B90-BEFC-4764FC8C7DED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF122618-2296-4246-AEE1-6AB4927E2DD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF122618-2296-4246-AEE1-6AB4927E2DD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF122618-2296-4246-AEE1-6AB4927E2DD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF122618-2296-4246-AEE1-6AB4927E2DD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F451941E-81A3-4B90-BEFC-4764FC8C7DED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F451941E-81A3-4B90-BEFC-4764FC8C7DED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F451941E-81A3-4B90-BEFC-4764FC8C7DED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F451941E-81A3-4B90-BEFC-4764FC8C7DED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {85AA0E34-E63B-4300-AD8A-61FF96039C64}
+	EndGlobalSection
+EndGlobal
