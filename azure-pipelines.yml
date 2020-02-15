@@ -1,0 +1,33 @@
+trigger:
+- master
+
+pool:
+  vmImage: "ubuntu-latest"
+
+variables:
+  VERSION: "$(build.buildNumber)"
+  DOCKER_REGISTRY: $(dockerId).azurecr.io
+
+steps:
+  - script: sudo service docker status
+    displayName: "docker status"
+
+  - script: docker-compose -f docker-compose.yml --project-directory . build
+    displayName: "docker-compose build"
+
+  - script: |
+      echo "$(dockerPassword)" | docker login  $(dockerId).azurecr.io -u $(dockerUsername) --password-stdin
+      docker push ${DOCKER_REGISTRY}/k8sexam:$(VERSION)
+
+    displayName: "docker publish"
+
+  - task: CopyFiles@2
+    inputs:
+      sourceFolder: $(Build.SourcesDirectory)/Kube/
+      contents: "**/*.*"
+      targetFolder: $(Build.ArtifactStagingDirectory)/Kube/
+
+  - task: PublishBuildArtifacts@1
+    inputs:
+      pathtoPublish: "$(Build.ArtifactStagingDirectory)"
+      artifactsName: "drop"
