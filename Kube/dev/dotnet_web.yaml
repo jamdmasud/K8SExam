@@ -29,7 +29,7 @@ spec:
     spec:
       containers:
         - name: aks-hellonode
-          image: masudacr.azurecr.io/dotnetkubernetes:#{Release.Artifacts.aks.BuildNumber}#
+          image: masudacr.azurecr.io/k8sexam:#{Release.Artifacts.aks.BuildNumber}#
           env:
             - name: ASPNETCORE_ENVIRONMENT
               value: "Production"
